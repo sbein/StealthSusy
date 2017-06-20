@@ -8,8 +8,7 @@ cmsenv
 git-cms-addpkg Configuration/Generator
 git-cms-addpkg PhysicsTools/PatAlgos
 cp ../../StealthSusy/PhysicsTools/PatAlgos/python/slimming/prunedGenParticles_cfi.py  PhysicsTools/PatAlgos/python/slimming/
-cp -r ../../StealthSusy/GenFragments/StealthSqSq_test_cff.py Configuration/Generator/python
-cp -r ../../StealthSusy/SLHA .
+cp -r ../../StealthSusy/Configuration/Generator/StealthSqSq_test_cff.py Configuration/Generator/python
 cmsenv
 scram b 
 cd ../../

@@ -19,19 +19,19 @@ BLOCK QNUMBERS 3000002 # n
     3  1 # colour rep (1: singlet, 3: triplet, 8: octet)
     4  0 # Particle/Antiparticle distinction (0=own anti)
 BLOCK MASS
-   2000001     %MSQ%
-   2000002     %MSQ%
-   2000003     %MSQ%
-   2000004     %MSQ%
+   2000001     %MSQ% 
+   2000002     %MSQ% 
+   2000003     %MSQ% 
+   2000004     %MSQ% 
    2000005     1.00000000E+10
    2000006     1.00000000E+10
    2000011     1.00000000E+10
    2000013     1.00000000E+10
    2000015     1.00000000E+10
    1000001     %MSQ%                 # down squark
-   1000002     %MSQ%
-   1000003     %MSQ%
-   1000004     %MSQ%
+   1000002     %MSQ% 
+   1000003     %MSQ% 
+   1000004     %MSQ% 
    1000005     1.00000000E+10
    1000006     1.00000000E+10
    1000011     1.00000000E+10
@@ -107,7 +107,7 @@ DECAY   1000022     0.00000000E+00
 
 '''
 
-SLHATable = baseSLHATable.replace('%MSQ%','1200').replace('%CHI%','100').replace('%SINGLINO%','900').replace('%SINGLET%','800')
+SLHATable = baseSLHATable.replace('%MSQ%','1200').replace('%CHI%','10').replace('%SINGLINO%','900').replace('%SINGLET%','800')
 
 generator = cms.EDFilter("Pythia8GeneratorFilter",
     #crossSection = cms.untracked.double(5.72e+07),
