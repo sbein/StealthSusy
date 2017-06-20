@@ -17,7 +17,7 @@ if not os.path.exists('CMSSW_8_0_5_patch1/src/Configuration/Generator/python/'+s
 
 if not os.path.exists('loot.tar'):
     print 'creating a new tar file'
-    os.system('tar -cvf loot.tar CMSSW_8_0_5_patch1 python')
+    os.system('tar -cvf loot.tar CMSSW_8_0_5_patch1')
 else: print 'using existing tar file'
 
 JDLtemplate = open(dirStem+'/template.jdl')

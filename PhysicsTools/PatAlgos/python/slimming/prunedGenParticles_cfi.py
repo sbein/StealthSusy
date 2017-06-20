@@ -34,7 +34,7 @@ prunedGenParticles = cms.EDProducer("GenParticlePruner",
         "keep pdgId = 2212",
         "keep status == 3 || ( 21 <= status <= 29) || ( 11 <= status <= 19)",  #keep event summary (status=3 for pythia6, 21 <= status <= 29 for pythia8)
         "keep isHardProcess() || fromHardProcessFinalState() || fromHardProcessDecayed() || fromHardProcessBeforeFSR() || (statusFlags().fromHardProcess() && statusFlags().isLastCopy())",  #keep event summary based on status flags
-        "keep 3000001",
-        "keep 3000002"
+        "keep pdgId = 3000001",
+        "keep pdgId = 3000002"
     )
 )

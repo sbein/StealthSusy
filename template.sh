@@ -6,18 +6,17 @@ echo "working directory"
 
 tar xvf loot.tar
 
-cd /uscms_data/d3/sbein/HiddenValley/CMSSW_8_0_5_patch1/src/
+cd CMSSW_8_0_5_patch1/src/
 eval `scramv1 runtime -sh`
-cd ${_CONDOR_SCRATCH_DIR}
-echo $PWD
+cd ../../
 
-cmsDriver.py SIGID_cff  --conditions auto:run2_mc --fast  --era Run2_2016 --eventcontent AODSIM --relval 100000,1000 -s GEN,SIM,RECOBEFMIX,DIGI:pdigi_valid,L1,DIGI2RAW,L1Reco,RECO,EI,HLT:@frozen2016 --datatier AODSIM --beamspot Realistic50ns13TeVCollision --fileout SIGID_AODSIM_n0.root --no_exec -n NUMEVENTS 
+cmsDriver.py SIGID_cff  --conditions auto:run2_mc --fast  --era Run2_2016 --eventcontent AODSIM --relval 100000,1000 -s GEN,SIM,RECOBEFMIX,DIGI:pdigi_valid,L1,DIGI2RAW,L1Reco,RECO,EI,HLT:@relval25ns --datatier AODSIM --beamspot Realistic50ns13TeVCollision --fileout SIGID_AODSIM_n0.root --no_exec -n NUMEVENTS 
 
 echo "ls'ing"
 ls
 #,EI,HLT:@relval25ns
 
-python python/edit_config.py SIGID_cff_GEN_SIM_RECOBEFMIX_DIGI_L1_DIGI2RAW_L1Reco_RECO_EI_HLT.py 
+python StealthSusy/python/edit_config.py SIGID_cff_GEN_SIM_RECOBEFMIX_DIGI_L1_DIGI2RAW_L1Reco_RECO_EI_HLT.py 
 
 cmsRun SIGID_cff_GEN_SIM_RECOBEFMIX_DIGI_L1_DIGI2RAW_L1Reco_RECO_EI_HLT.py
 

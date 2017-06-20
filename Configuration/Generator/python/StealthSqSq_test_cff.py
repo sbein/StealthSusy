@@ -1,10 +1,4 @@
-import FWCore.ParameterSet.Config as cms
-
-from Configuration.Generator.Pythia8CommonSettings_cfi import *
-from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
-
-baseSLHATable = '''
-BLOCK MODSEL  # Model selection
+baseSLHATable = '''BLOCK MODSEL  # Model selection
     1     1   sugra
 #
 BLOCK QNUMBERS 3000001 # f
@@ -107,7 +101,13 @@ DECAY   1000022     0.00000000E+00
 
 '''
 
-SLHATable = baseSLHATable.replace('%MSQ%','1200').replace('%CHI%','10').replace('%SINGLINO%','900').replace('%SINGLET%','800')
+import FWCore.ParameterSet.Config as cms
+
+from Configuration.Generator.Pythia8CommonSettings_cfi import *
+from Configuration.Generator.Pythia8CUEP8M1Settings_cfi import *
+
+
+SLHATable = baseSLHATable.replace('%MSQ%','1200').replace('%MCHI%','10').replace('%MSINGLINO%','900').replace('%MSINGLET%','800')
 
 generator = cms.EDFilter("Pythia8GeneratorFilter",
     #crossSection = cms.untracked.double(5.72e+07),

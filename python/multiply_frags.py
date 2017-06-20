@@ -12,6 +12,6 @@ for masses in SinglinoSinglet_masses:
         line = line.replace(' %MSQ% ',' '+str(1500)+' ')
         line = line.replace(' %MSINGLINO% ',' '+str(masses[0])+' ')
         line = line.replace(' %MSINGLET% ',' '+str(masses[1])+' ')
-        line = line.replace(' %MCHI% ',' '+str(11)+' ')        
+        line = line.replace(' %MCHI% ',' '+str(10)+' ')        
         f.write(line)
     f.close()
