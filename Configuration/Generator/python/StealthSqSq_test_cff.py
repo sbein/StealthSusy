@@ -107,7 +107,7 @@ DECAY   1000022     0.00000000E+00
 
 '''
 
-SLHATable = baseSLHATable.replace('%MSQ%','1000').replace('%CHI%','100').replace('%SINGLINO%','900').replace('%SINGLET%','800')
+SLHATable = baseSLHATable.replace('%MSQ%','1200').replace('%CHI%','100').replace('%SINGLINO%','900').replace('%SINGLET%','800')
 
 generator = cms.EDFilter("Pythia8GeneratorFilter",
     #crossSection = cms.untracked.double(5.72e+07),
@@ -116,7 +116,7 @@ generator = cms.EDFilter("Pythia8GeneratorFilter",
     filterEfficiency = cms.untracked.double(1.0),
     pythiaHepMCVerbosity = cms.untracked.bool(True),
     comEnergy = cms.double(13000.0),
-    SLHAFileForPythia8  = cms.string(SLHATable),    
+    SLHATableForPythia8  = cms.string(SLHATable),    
     PythiaParameters = cms.PSet(
         pythia8CommonSettingsBlock,
         pythia8CUEP8M1SettingsBlock,
