@@ -18,7 +18,7 @@ git-cms-addpkg PhysicsTools/PatAlgos
 
 cp ../../StealthSusy/PhysicsTools/PatAlgos/python/slimming/prunedGenParticles_cfi.py  PhysicsTools/PatAlgos/python/slimming/
 
-cp -r ../../StealthSusy/Configuration/Generator/StealthSqSq_test_cff.py Configuration/Generator/python
+cp -r ../../StealthSusy/Configuration/Generator/python/StealthSqSq_test_cff.py Configuration/Generator/python
 
 cmsenv
 
